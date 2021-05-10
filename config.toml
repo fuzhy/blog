@@ -1,9 +1,5 @@
-# This is a simple configuration.
-# If you want to see the full configuration, please check `full-config.toml` .
-# And see https://gohugo.io/getting-started/configuration/ .
-
-baseURL = "http://localhost:1313/"
-title = "Jane - A super concise theme for Hugo"
+baseURL = "https://fuzhy.github.io/blog/"
+title = "fuzhy blog"
 enableRobotsTXT = true
 enableEmoji = true
 theme = "jane"
@@ -16,23 +12,20 @@ googleAnalytics = ""      # UA-XXXXXXXX-X
 copyright = ""            # default: author.name ↓        # 默认为下面配置的author.name ↓
 
 # language support # en / zh-cn / other... translations present in i18n/
-defaultContentLanguage = "en"           # Default language to use
+defaultContentLanguage = "zh-cn"           # Default language to use
 [languages.en]
   languageCode = "en"
+[languages.zh-cn]
+  languageCode = "zh-cn"
 
 [author]                  # essential                     # 必需
-  name = "xianmin"
+  name = "fuzhy"
 
 [sitemap]                 # essential                     # 必需
   changefreq = "weekly"
   priority = 0.5
   filename = "sitemap.xml"
 
-[[menu.main]]             # config your menu              # 配置目录
-  name = "This is Home"
-  weight = 10
-  identifier = "home"
-  url = "/"
 [[menu.main]]
   name = "Archives"
   weight = 20
@@ -48,21 +41,16 @@ defaultContentLanguage = "en"           # Default language to use
   weight = 40
   identifier = "categories"
   url = "/categories/"
-[[menu.main]]
-  name = "external-link"
-  weight = 50
-  url = "https://gohugo.io"
-
 
 [params]
-  since = "2017"            # Site creation time          # 站点建立时间
+  since = "2021"            # Site creation time          # 站点建立时间
   homeFullContent = false   # if false, show post summaries on home page. Otherwise show full content.
   rssFullContent = true     # if false, Rss feed instead of the summary
 
   # site info (optional)                                  # 站点信息（可选，不需要的可以直接注释掉）
-  logoTitle = "Jane"        # default: the title value    # 默认值: 上面设置的title值
-  keywords = ["Hugo", "theme","jane"]
-  description = "Hugo theme jane example site."
+  logoTitle = "fuzhy blog"        # default: the title value    # 默认值: 上面设置的title值
+  keywords = ["fuzhy", "gopher"]
+  description = "personal blog website"
 
   # The date format to use; for a list of valid formats, see https://gohugo.io/functions/format/
   dateFormatToUse = "2006-01-02"
