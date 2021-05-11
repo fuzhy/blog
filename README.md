@@ -1,0 +1,2 @@
+# blog
+fuzhy personal blog.
