@@ -7,7 +7,5 @@ tags: [other]
 draft: false
 ---
 
-# Hello Wrold
-
 This is the first blog for `hello world`.
 
