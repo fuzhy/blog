@@ -16,34 +16,76 @@
 &lt;p>hugo设置&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">hugo new site blog
-cd blog
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">hugo new site blog
+&lt;span class="nb">cd&lt;/span> blog
 git init
-&lt;span style="color:#75715e"># theme&lt;/span>
+&lt;span class="c1"># theme&lt;/span>
 git submodule add https://github.com/xianmin/hugo-theme-jane.git themes/jane
 cp -r themes/jane/exampleSite/content ./
 cp themes/jane/exampleSite/config.toml ./
-&lt;span style="color:#75715e"># test: http://localhost:1313/&lt;/span>
+&lt;span class="c1"># test: http://localhost:1313/&lt;/span>
 hugo server
-&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="3">
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ol start="3">
 &lt;li>git设置&lt;/li>
 &lt;/ol>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">git add .
-git commit -m &lt;span style="color:#e6db74">&amp;#34;first commit&amp;#34;&lt;/span>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">git add .
+git commit -m &lt;span class="s2">&amp;#34;first commit&amp;#34;&lt;/span>
 git branch -M main
 git remote add origin https://github.com/fuzhy/blog.git
 git push -u origin main
-&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="4">
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ol start="4">
 &lt;li>github actions的workflow设置&lt;/li>
 &lt;/ol>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">mkdir -p .github/workflows
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">mkdir -p .github/workflows
 touch .github/workflows/gh-pages.yaml
-&lt;span style="color:#75715e"># gh-pages.yaml reference: https://github.com/peaceiris/actions-gh-pages&lt;/span>
-&lt;span style="color:#75715e"># commit &amp;amp; push&lt;/span>
+&lt;span class="c1"># gh-pages.yaml reference: https://github.com/peaceiris/actions-gh-pages&lt;/span>
+&lt;span class="c1"># commit &amp;amp; push&lt;/span>
 git add .
-git commit -m &lt;span style="color:#e6db74">&amp;#34;add gh-pages workflow&amp;#34;&lt;/span>
+git commit -m &lt;span class="s2">&amp;#34;add gh-pages workflow&amp;#34;&lt;/span>
 git push
-&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="5">
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ol start="5">
 &lt;li>pages设置。&lt;/li>
 &lt;/ol>
 &lt;ul>
@@ -62,8 +104,15 @@ git push
 &lt;li>debug&lt;/li>
 &lt;/ol>
 &lt;p>改完之后github action直接deploy出错，根据错误日志，查询大概需要extended版本的hugo：&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">Error: Error building site: TOCSS: failed to transform &lt;span style="color:#e6db74">&amp;#34;sass/jane.scss&amp;#34;&lt;/span> &lt;span style="color:#f92672">(&lt;/span>text/x-scss&lt;span style="color:#f92672">)&lt;/span>. Check your Hugo installation; you need the extended version to build SCSS/SASS
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>于是修改action的配置，新增extended模式。==&amp;gt;action部署不再报错，搞定。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">Error: Error building site: TOCSS: failed to transform &lt;span class="s2">&amp;#34;sass/jane.scss&amp;#34;&lt;/span> &lt;span class="o">(&lt;/span>text/x-scss&lt;span class="o">)&lt;/span>. Check your Hugo installation&lt;span class="p">;&lt;/span> you need the extended version to build SCSS/SASS
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>于是修改action的配置，新增extended模式。==&amp;gt;action部署不再报错，搞定。&lt;/p>
 &lt;p>&lt;a href="https://github.com/marketplace/actions/hugo-setup#%EF%B8%8F-use-hugo-extended">https://github.com/marketplace/actions/hugo-setup#%EF%B8%8F-use-hugo-extended&lt;/a>&lt;/p>
 &lt;ol start="8">
 &lt;li>初版搞定&lt;/li>
@@ -71,5 +120,12 @@ git push
 &lt;p>功能：提交源文件到main分支，action自动build/deloy到gh-pages分支，网站自动更新&lt;/p>
 &lt;h2 id="迁移">迁移&lt;/h2>
 &lt;p>后期需要迁移，或者在其他电脑更新blog时，只需：&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">git clone --recursive https://github.com/fuzhy/blog.git
-&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Hello World</title><link>https://fuzhy.github.io/blog/post/2021-05-11-hello-world/</link><pubDate>Tue, 11 May 2021 22:37:56 +0800</pubDate><guid>https://fuzhy.github.io/blog/post/2021-05-11-hello-world/</guid><description>&lt;p>This is the first blog for &lt;code>hello world&lt;/code>.&lt;/p></description></item></channel></rss>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">git clone --recursive https://github.com/fuzhy/blog.git
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>Hello World</title><link>https://fuzhy.github.io/blog/post/2021-05-11-hello-world/</link><pubDate>Tue, 11 May 2021 22:37:56 +0800</pubDate><guid>https://fuzhy.github.io/blog/post/2021-05-11-hello-world/</guid><description>&lt;p>This is the first blog for &lt;code>hello world&lt;/code>.&lt;/p></description></item></channel></rss>
