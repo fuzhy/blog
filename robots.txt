@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://fuzhy.github.io/blog/sitemap.xml
+Sitemap: https://blog.fuzhy.top/sitemap.xml
